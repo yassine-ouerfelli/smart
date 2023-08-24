@@ -5,6 +5,7 @@ const productsrouter=require('./routers/products.router')
 const homerouter=require('./routers/home.router')
 const detailsrouter=require('./routers/details.router')
 const addproducts = require('./routers/add_products.js')
+const product_details = require('./routers/product_details.js')
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 app.use(bodyParser.json()); // Parse JSON bodies
@@ -14,9 +15,10 @@ app.use( express.static( "public" ) );
 app.set('view engine','ejs')
 app.set('views','views')
 app.use(addproducts)
+app.use(product_details)
 app.use(productsrouter)
 app.use(homerouter)
-app.use(detailsrouter)
+
 
 
 app.get ('/contact', (req,res,next)=>{
