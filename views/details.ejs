@@ -1,0 +1,35 @@
+<%- include('parts/header.ejs')%>
+
+    <br><br><br><br>
+    
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <img src="/public/images<%= product.image %>" alt="">
+            </div>
+            <div class="col">
+                <h2 class="detail-1" style="text-align: right"><%= product.name %></h2>
+                <p style="text-align: right"><%= product.price %></p><br>
+                <p style="text-align: right"><%= product.description %></p>
+			</div>
+        </div>
+    </div>
+    
+    <br><br><br><br><br><br>
+    <section class="padded-section">
+        <section class="wrapper">
+            <div class="gallery two-col-gallery"></div>
+            <div class="container clearfix extra-pad-mobile cta-container">
+                <span class="icon i_cta_balloon"></span>
+                <div class="cta-content">
+                    <h3>Contact Us</h3>
+                    <p>Have questions? Our experienced staff can help you find the answers.<br> 
+                    Click below to contact us or find an office near you.</p>
+                    <a class="button" href="/contact" data-emacategory="CTA">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+<%- include('parts/bottom.ejs')%>
