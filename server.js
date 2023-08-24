@@ -9,7 +9,7 @@ const product_details = require('./routers/product_details.js')
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 app.use(bodyParser.json()); // Parse JSON bodies
-app.use(express.static(path.join(__dirname,'assets')))
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public/images/', express.static('./public/images'));
 app.use( express.static( "public" ) );
 app.set('view engine','ejs')
